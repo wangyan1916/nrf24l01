@@ -133,7 +133,7 @@ CRC 是数据包中的错误检测机制。
 
 ## 7.4 自动数据包处理
 
-增强型 ShockBurst™ 使用 ShockBurst™ 进行自动数据包处理。 
+增强型 ShockBurst™ 使用 ShockBurst™ 进行自动数据包处理。
 
 功能有:
 
@@ -152,7 +152,7 @@ CRC 是数据包中的错误检测机制。
 
 借助 DPL 功能，nRF24L01 可以自动解码接收到的数据包的有效负载长度，而无需使用 `RX_PW_Px`寄存器。  MCU 可以使用`R_RX_PL_WID`命令读取接收到的有效负载的长度。
 
-为了启用 DPL，必须设置`FEATURE`寄存器中的`EN_DPL`位。 
+为了启用 DPL，必须设置`FEATURE`寄存器中的`EN_DPL`位。
 
 在 RX 模式下，必须设置 `DYNPD`寄存器。 发送到启用 DPL 的 PRX 的 PTX 必须设置`DYNPD`中的`DPL_P0`位。
 
@@ -196,7 +196,7 @@ nRF24L01 可以同时在`TX FIFO (PRX)`中保留三个待处理的 ACK 数据包
 
 这确保了向 ACK 生成器提供正确的有效负载
 
-如果`TX FIFO (PRX)`包含多个 PTX 有效负载，则将使用先进先出原则处理有效负载。 
+如果`TX FIFO (PRX)`包含多个 PTX 有效负载，则将使用先进先出原则处理有效负载。
 
 如果所有挂起的有效负载都被寻址到链路丢失的 PTX，则`TX FIFO (PRX)`将被阻止。 在这种情况下，MCU 可以使用`FLUSH_TX`命令刷新 `TX FIFO (PRX)`。
 
